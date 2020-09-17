@@ -25,3 +25,13 @@ class Card
   end
 end
 
+(1..4).each do
+  (2..9).each do |num|
+    deck.append(Card.new num)
+  end
+  (1..3).each do
+    deck.append(Card.new 10)
+  end
+  deck.append(Card.new 11)
+end
+
