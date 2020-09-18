@@ -1,6 +1,7 @@
 deck = []
 
 class Player
+  attr_reader :bankroll, :hand
 
   def initialize name
     @name = name
@@ -10,6 +11,7 @@ class Player
 end
 
 class House
+  attr_reader :bankroll, :hand
 
   def initialize name
     @name = name
@@ -25,7 +27,7 @@ class Card
   end
 end
 
-def check_winner player_value house_value
+def check_winner player_value, house_value
 
   if player_value > house_value
     return 'player'
@@ -47,4 +49,13 @@ end
 end
 
 deck.shuffle!
+
+current_player = Player.new gets.chomp
+house = House.new 'House'
+
+current_player.hand.append(deck.sample)
+current_player.hand.append(deck.sample)
+
+house.hand.append(deck.sample)
+house.hand.append(deck.sample)
 
