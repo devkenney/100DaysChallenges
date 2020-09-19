@@ -1,7 +1,7 @@
 class GiftsController < ApplicationController
 
   def index
-    render json: { status: 200, Gift.all }
+    render json: { status: 200, gifts: Gift.all }
   end
 
   def show
