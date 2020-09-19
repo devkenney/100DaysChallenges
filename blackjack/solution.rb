@@ -43,11 +43,11 @@ def check_winner player_value, house_value
   end
 end
 
-(1..4).each do
+4.times do
   (2..9).each do |num|
     deck.append(Card.new num)
   end
-  (1..4).each do
+  4.times do
     deck.append(Card.new 10)
   end
   deck.append(Card.new 11)
