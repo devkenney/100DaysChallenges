@@ -43,3 +43,5 @@ for (let i = 0; i < 4; i++) {
   deck.push(new Card(11));
 }
 console.log(deck);
+
+currentPlayer = new Player();
