@@ -1,14 +1,6 @@
-import React, { Component } from 'react';
-import Daters from './components/Hello.js'
+import React, { useState, useEffect } from 'react';
+import Daters from './components/Hello.js';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Daters />
-      </div>
-    );
-  }
+export default function App() {
+  return <h1>Hello World!</h1>
 }
-
-export default App;

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
-class Daters extends Component {
-  render () {
-    return (
-      <h1>Hello Dating World</h1>
-    )
-  }
+export default function Daters (props) {
+  return (
+    <div>This is the daters.</div>
+  )
 }
-
-export default Daters;
