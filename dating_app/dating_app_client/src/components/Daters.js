@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 export default function Daters (props) {
-  const [daters, updateDaters] = useState([]);
-  const getDaters = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/users');
-      const data = await response.json();
-      updateDaters(data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  useEffect(() => {
-    (
-      async function () {
-        await getDaters();
-      }
-    )()
-  },[]);
   return (
     <div>
-      {daters.map((dater) => {
+      {props.daters?.map((dater) => {
         return (
           <div key={dater.id}>
             <h3>Name: {dater.name}</h3>

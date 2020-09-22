@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all.sample(3)
+    tempList = User.all.sample(6)
+    @users = {"list_one": [tempList[0], tempList[1], tempList[2]], "list_two": [tempList[3], tempList[4], tempList[5]]}
 
     render json: @users
   end
