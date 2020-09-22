@@ -36,6 +36,11 @@ export default function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (formInputs.ltl === 'on') {
+      formInputs.ltl = true;
+    } else {
+      formInputs.ltl = false;
+    }
     try {
       const response = await axios.post(
         'http://localhost:3000/users',
