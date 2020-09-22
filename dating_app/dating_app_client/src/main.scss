@@ -1,0 +1,23 @@
+* {
+  border: 1px solid gold;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
+}
